@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="public/logo.jpg" alt="Servecity Environment Logo" width="200" />
+</div>
+
 # 📍 Servecity Environment Private Limited – Company Overview
 
 Servecity Environment Private Limited is a private limited company incorporated in India on June 28, 2021 and registered with the Registrar of Companies (RoC), Mumbai, Maharashtra. Its Corporate Identification Number (CIN) is U37100MH2021PTC362836. The company is currently active according to Ministry of Corporate Affairs records.
