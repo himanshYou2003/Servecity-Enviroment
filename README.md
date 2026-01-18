@@ -1,73 +1,19 @@
-# React + TypeScript + Vite
+# 📍 Servecity Environment Private Limited – Company Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Servecity Environment Private Limited is a private limited company incorporated in India on June 28, 2021 and registered with the Registrar of Companies (RoC), Mumbai, Maharashtra. Its Corporate Identification Number (CIN) is U37100MH2021PTC362836. The company is currently active according to Ministry of Corporate Affairs records.
 
-Currently, two official plugins are available:
+## 🏭 Industry & Business Activity
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The company operates in the environmental services and waste management sector and is involved in activities related to recycling and managing waste materials. This includes handling metal waste, scrap, and various forms of waste management (such as wet waste, dry waste, e-waste, and paper/plastic waste) for corporates, industries, and institutions.
 
-## React Compiler
+## 🌱 Environmental & Waste Management Focus
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+On its social presence (e.g., LinkedIn/Facebook), Servecity Environment describes itself as part of the waste management industry, focusing on environmental services and total waste management solutions aimed at sustainability for the environment and society.
 
-## Expanding the ESLint configuration
+## 📌 Company Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Type**: Private Limited (Non-Government Company)
+- **Incorporation Date**: 28 June 2021
+- **Registered Office**: Flat No 206, A Wing, Nav Kiran SRA Society, Near Apna Ghar Society, Harinagar, Mumbai, Maharashtra, India – 400060
+- **Authorized & Paid-Up Capital**: ₹10,000 (each)
+- **Directors**: Avinashkumar Anilkumar Sah and Ekanath Dhondu Tambe
