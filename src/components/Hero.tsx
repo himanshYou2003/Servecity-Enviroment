@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -36,12 +37,12 @@ const Hero = () => {
             Servecity Environment is a global market leader with deep expertise in climate change, carbon offset solutions, and carbon asset management. We champion sustainability solutions like no other.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="btn-primary bg-eco-sage text-eco-dark hover:bg-white hover:text-eco-forest border-none">
+            <Link to="/what-we-do" className="btn-primary bg-eco-sage text-eco-dark hover:bg-white hover:text-eco-forest border-none text-center flex items-center justify-center">
               Our Services
-            </button>
-            <button className="px-8 py-3 rounded-full border border-white/30 text-white font-semibold hover:bg-white/10 transition-all duration-300 backdrop-blur-sm">
+            </Link>
+            <Link to="/contact" className="px-8 py-3 rounded-full border border-white/30 text-white font-semibold hover:bg-white/10 transition-all duration-300 backdrop-blur-sm text-center flex items-center justify-center">
               Contact Us
-            </button>
+            </Link>
           </div>
         </motion.div>
 
