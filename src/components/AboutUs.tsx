@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-const WhoWeAre = () => {
+const AboutUs = () => {
   return (
     <section className="py-24 px-4 md:px-8 bg-white">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -10,7 +10,7 @@ const WhoWeAre = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-eco-forest font-semibold tracking-wider uppercase text-sm">Who We Are</span>
+          <span className="text-eco-forest font-semibold tracking-wider uppercase text-sm">About Us</span>
           <h2 className="text-4xl md:text-5xl font-bold text-eco-dark mt-4 mb-8 leading-tight">
             Total Waste Management <br />
             <span className="text-eco-sage">Solutions</span>
@@ -28,7 +28,7 @@ const WhoWeAre = () => {
               <p className="text-sm text-gray-500 font-medium">CIN: U37100MH2021PTC362836</p>
             </div>
           </div>
-          <Link to="/who-we-are" className="mt-10 inline-block px-8 py-3 rounded-full bg-eco-forest text-white font-semibold hover:bg-eco-dark transition-all duration-300 shadow-lg hover:shadow-xl">
+          <Link to="/about-us" className="mt-10 inline-block px-8 py-3 rounded-full bg-eco-forest text-white font-semibold hover:bg-eco-dark transition-all duration-300 shadow-lg hover:shadow-xl">
             Read Our Story
           </Link>
         </motion.div>
@@ -61,4 +61,4 @@ const WhoWeAre = () => {
   );
 };
 
-export default WhoWeAre;
+export default AboutUs;

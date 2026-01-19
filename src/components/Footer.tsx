@@ -26,7 +26,7 @@ const Footer = () => {
         <div>
           <h3 className="text-white font-bold mb-6">Quick Links</h3>
           <ul className="space-y-3 text-sm">
-            {['Home', 'Who We Are', 'What We Do', 'Investors', 'Engage', 'Contact'].map((item) => (
+            {['Home', 'About Us', 'Our Services', 'Engage', 'Contact'].map((item) => (
               <li key={item}>
                 <a href="#" className="hover:text-eco-sage transition-colors text-white/70">{item}</a>
               </li>

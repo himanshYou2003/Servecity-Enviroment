@@ -1,5 +1,5 @@
 import Hero from '../components/Hero';
-import WhoWeAre from '../components/WhoWeAre';
+import AboutUs from '../components/AboutUs';
 
 import { ArrowDown } from 'lucide-react';
 import Mission from '../components/Mission';
@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <main>
       <Hero />
-      <WhoWeAre />
+      <AboutUs />
 
       <Mission />
       <Stats />

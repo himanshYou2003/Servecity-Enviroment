@@ -26,15 +26,12 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-3xl text-left"
         >
-          <span className="inline-block py-1 px-3 rounded-full bg-white/20 backdrop-blur-md text-white text-sm font-semibold mb-6 border border-white/30">
-            Leading Carbon Credit Developer & Supplier
-          </span>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight leading-tight">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6  tracking-tight leading-tight">
             Start Your <br />
-            <span className="text-eco-sage">Climate Journey</span>
+            <span className="text-eco-sage text-3xl md:text-5xl lg:text-6xl leading-tight">Sustainable Journey with us</span>
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl font-light leading-relaxed">
-            Servecity Environment is a global market leader with deep expertise in climate change, carbon offset solutions, and carbon asset management. We champion sustainability solutions like no other.
+           Everything we do is in service of increasingly ambitious climate and sustainable development goals – and an accelerated transition to a sustainable future.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link to="/what-we-do" className="btn-primary bg-eco-sage text-eco-dark hover:bg-white hover:text-eco-forest border-none text-center flex items-center justify-center">

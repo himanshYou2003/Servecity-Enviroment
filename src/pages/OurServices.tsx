@@ -34,7 +34,7 @@ const services = [
   }
 ];
 
-const WhatWeDoPage = () => {
+const OurServicesPage = () => {
   return (
     <div className="pt-24 min-h-screen bg-eco-beige">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
@@ -44,7 +44,7 @@ const WhatWeDoPage = () => {
           transition={{ duration: 0.6 }}
         >
           <span className="text-eco-forest font-semibold tracking-wider uppercase text-sm">Our Services</span>
-          <h1 className="text-4xl md:text-6xl font-bold text-eco-dark mt-4 mb-8">What We Do</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-eco-dark mt-4 mb-8">Our Services</h1>
           
           <p className="text-xl text-gray-600 max-w-3xl mb-16 leading-relaxed">
             Servecity Environment specializes in <strong>Total Waste Management</strong> and environmental recycling services. 
@@ -87,4 +87,4 @@ const WhatWeDoPage = () => {
   );
 };
 
-export default WhatWeDoPage;
+export default OurServicesPage;

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-const WhoWeArePage = () => {
+const AboutUsPage = () => {
   return (
     <div className="pt-24 min-h-screen bg-eco-beige">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
@@ -10,7 +10,7 @@ const WhoWeArePage = () => {
           transition={{ duration: 0.6 }}
         >
           <span className="text-eco-forest font-semibold tracking-wider uppercase text-sm">About Us</span>
-          <h1 className="text-4xl md:text-6xl font-bold text-eco-dark mt-4 mb-8">Who We Are</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-eco-dark mt-4 mb-8">About Us</h1>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
@@ -85,4 +85,4 @@ const WhoWeArePage = () => {
   );
 };
 
-export default WhoWeArePage;
+export default AboutUsPage;
