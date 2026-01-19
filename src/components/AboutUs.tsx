@@ -17,16 +17,16 @@ const AboutUs = () => {
           </h2>
           <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
             <p>
-              Servecity Environment Private Limited is a premier environmental services company incorporated in 2021. 
-              Based in Mumbai, we specialize in comprehensive waste management solutions for corporates, industries, and institutions.
+              Servecity Environment provides end-to-end environmental
+compliance and sustainability solutions to corporates, Industries. Our
+integrated services offers waste management services, EPR services
+and compliance support, and carbon credit generation/ trading —
+helping companies reduce their environmental footprint and meet
+their ESG goals.
             </p>
-            <p>
-              We handle a wide spectrum of waste categories including metal, scrap, wet & dry waste, e-waste, and plastics. 
-              Our mission is to drive sustainability for the environment and society through efficient recycling and waste management practices.
-            </p>
-            <div className="pt-4">
+            {/* <div className="pt-4">
               <p className="text-sm text-gray-500 font-medium">CIN: U37100MH2021PTC362836</p>
-            </div>
+            </div> */}
           </div>
           <Link to="/about-us" className="mt-10 inline-block px-8 py-3 rounded-full bg-eco-forest text-white font-semibold hover:bg-eco-dark transition-all duration-300 shadow-lg hover:shadow-xl">
             Read Our Story

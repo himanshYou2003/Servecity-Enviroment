@@ -43,7 +43,7 @@ const OurServicesPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-eco-forest font-semibold tracking-wider uppercase text-sm">Our Services</span>
+
           <h1 className="text-4xl md:text-6xl font-bold text-eco-dark mt-4 mb-8">Our Services</h1>
           
           <p className="text-xl text-gray-600 max-w-3xl mb-16 leading-relaxed">

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import WhyChooseUs from '../components/WhyChooseUs';
 
 const AboutUsPage = () => {
   return (
@@ -9,20 +10,22 @@ const AboutUsPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-eco-forest font-semibold tracking-wider uppercase text-sm">About Us</span>
           <h1 className="text-4xl md:text-6xl font-bold text-eco-dark mt-4 mb-8">About Us</h1>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
               <p>
-                <strong>Servecity Environment Private Limited</strong> is a premier environmental services and waste management company 
-                registered in Mumbai, Maharashtra, India. Incorporated on <strong>June 28, 2021</strong>, we are dedicated to providing 
-                sustainable waste solutions for businesses and institutions.
+                We are committed to inspiring communities and organizations to
+minimize their carbon footprint through our services, community-
+based projects and environment friendly solutions.
               </p>
               <p>
-                Our core focus lies in environmental sustainability, offering end-to-end waste management services that reduce 
-                the ecological footprint of our clients. We operate with a clear mission to drive circular economy principles 
-                and ensure responsible handling of all waste categories.
+                We help Government, Industries and Corporates reduce, offset their
+carbon emission and save Lakhs and Crores of rupees every year
+they spend towards achieving their corporate sustainable goals by
+providing them holistic service which combines Waste
+management activities+ EPR Services+ ESG Reporting+ Carbon
+credit trading.
               </p>
               
               <div className="bg-white p-6 rounded-2xl shadow-sm border border-eco-sage/20 mt-8">
@@ -81,6 +84,7 @@ const AboutUsPage = () => {
           </div>
         </motion.div>
       </div>
+      <WhyChooseUs className="bg-eco-beige" />
     </div>
   );
 };

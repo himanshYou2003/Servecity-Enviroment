@@ -26,9 +26,9 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-3xl text-left"
         >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 tracking-tight leading-[1.1] drop-shadow-lg">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-8 tracking-tight leading-[0.7] drop-shadow-lg">
             Start Your <br />
-            <span className="text-eco-sage">Sustainable Journey with us</span>
+            <span className="text-eco-sage text-3xl md:text-5xl lg:text-6xl">Sustainable Journey with us</span>
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl font-light leading-relaxed drop-shadow-md">
            Everything we do is in service of increasingly ambitious climate and sustainable development goals – and an accelerated transition to a sustainable future.
