@@ -43,17 +43,17 @@ const Navbar = () => {
                   <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                     <div className="bg-white rounded-xl shadow-xl border border-gray-100 p-2 min-w-[200px] overflow-hidden">
                       {[
-                        "Waste Management",
-                        "EPR",
-                        "ESG",
-                        "EKI/AVS"
+                        { name: "Waste Management", href: "/our-services" },
+                        { name: "EPR", href: "/our-services#epr-section" },
+                        { name: "ESG", href: "/our-services" },
+                        { name: "EKI/AVS", href: "/our-services" }
                       ].map((subItem, i) => (
                         <Link
                           key={i}
-                          to="/our-services"
+                          to={subItem.href}
                           className="block px-4 py-2.5 text-sm text-gray-600 hover:text-eco-forest hover:bg-eco-sage/10 rounded-lg transition-colors"
                         >
-                          {subItem}
+                          {subItem.name}
                         </Link>
                       ))}
                     </div>

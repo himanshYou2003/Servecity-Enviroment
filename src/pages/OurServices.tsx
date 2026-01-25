@@ -34,7 +34,23 @@ const services = [
   }
 ];
 
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 const OurServicesPage = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.slice(1));
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
+
   return (
     <div className="pt-24 min-h-screen bg-eco-beige">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
@@ -75,6 +91,7 @@ const OurServicesPage = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            id="epr-section"
             className="mt-24 relative overflow-hidden rounded-[3rem] bg-linear-to-br from-eco-forest to-[#2A4435] text-white shadow-2xl"
           >
             {/* Background Pattern */}
