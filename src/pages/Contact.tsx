@@ -49,7 +49,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900 mb-1">Call Us</p>
-                      <p className="text-gray-600">+91 123 456 7890</p>
+                      <p className="text-gray-600">+91 86550 48759</p>
                     </div>
                   </div>
 
