@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Recycle, Trash2, Cpu, FileText, Factory, Leaf, ShieldCheck, Globe, Award, Coins } from 'lucide-react';
+import { Recycle, Trash2, Cpu, FileText, Factory, Leaf, ShieldCheck, Globe, Award, TrendingUp, CheckCircle2 } from 'lucide-react';
 
 const services = [
   {
@@ -75,13 +75,23 @@ const OurServicesPage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white p-4 md:p-8 rounded-2xl md:rounded-3xl shadow-sm border border-eco-sage/20 hover:shadow-xl transition-all duration-300 flex flex-col items-start h-full"
+                className="bg-white p-4 md:p-8 rounded-2xl md:rounded-3xl shadow-sm border border-eco-sage/20 hover:shadow-xl transition-all duration-300 flex flex-col items-start h-full group cursor-pointer"
+                onClick={() => {
+                   if (service.title === "Wet Waste Management") {
+                       window.location.href = "/services/waste-management"; 
+                   }
+                }}
               >
-                <div className="w-10 h-10 md:w-14 md:h-14 bg-eco-beige/50 rounded-xl md:rounded-2xl flex items-center justify-center mb-3 md:mb-6 text-eco-forest shadow-sm shrink-0">
+                <div className="w-10 h-10 md:w-14 md:h-14 bg-eco-beige/50 rounded-xl md:rounded-2xl flex items-center justify-center mb-3 md:mb-6 text-eco-forest shadow-sm shrink-0 group-hover:bg-eco-forest group-hover:text-white transition-colors duration-300">
                   <service.icon className="w-5 h-5 md:w-7 md:h-7" />
                 </div>
-                <h3 className="text-sm md:text-2xl font-bold text-eco-dark mb-2 md:mb-3 leading-tight">{service.title}</h3>
+                <h3 className="text-sm md:text-2xl font-bold text-eco-dark mb-2 md:mb-3 leading-tight group-hover:text-eco-forest transition-colors">{service.title}</h3>
                 <p className="text-xs md:text-base text-gray-600 leading-relaxed line-clamp-3 md:line-clamp-none">{service.desc}</p>
+                {service.title === "Wet Waste Management" && (
+                     <div className="mt-4 text-eco-forest font-semibold text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                         Learn More →
+                     </div>
+                )}
               </motion.div>
             ))}
           </div>
@@ -105,7 +115,7 @@ const OurServicesPage = () => {
                 <div className="flex-1 space-y-8">
                   <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-eco-sage text-sm font-medium">
                     <Globe size={16} />
-                    <span>Global Standard Policy</span>
+                    <span>Global Standard</span>
                   </div>
                   
                   <h2 className="text-3xl md:text-5xl font-bold leading-tight">
@@ -114,38 +124,30 @@ const OurServicesPage = () => {
                   </h2>
                   
                   <p className="text-lg text-gray-200 leading-relaxed">
-                    EPR is a policy approach that extends the producer's responsibility for a product to the post-consumer stage of its life cycle. It shifts the burden of waste management from municipalities to the producers.
+                    Servecity Environment provide comprehensive one-stop solution by connecting waste producers, Corporates with recyclers which generate EPR credits, by providing start to end assist.
                   </p>
 
-                  <div className="space-y-6 pt-4">
-                    <div className="flex gap-4">
-                      <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center shrink-0">
-                        <ShieldCheck className="text-eco-sage" size={24} />
-                      </div>
-                      <div>
-                        <h4 className="text-xl font-semibold mb-2">Legal Accountability</h4>
-                        <p className="text-gray-300 text-sm leading-relaxed">
-                          Producers are legally and financially responsible for the entire lifecycle of their products, ensuring safe disposal.
-                        </p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex gap-4">
-                      <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center shrink-0">
-                        <Recycle className="text-eco-sage" size={24} />
-                      </div>
-                      <div>
-                        <h4 className="text-xl font-semibold mb-2">Lifecycle Management</h4>
-                        <p className="text-gray-300 text-sm leading-relaxed">
-                          From manufacturing to post-consumer waste, companies must ensure efficient recycling and recovery.
-                        </p>
-                      </div>
-                    </div>
+                  <div className="bg-white/5 rounded-2xl p-6 border border-white/10 mt-6">
+                    <h4 className="text-xl font-semibold mb-3 text-eco-sage">We turn compliance into competitive advantage</h4>
+                    <ul className="text-gray-300 space-y-2">
+                        <li className="flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 bg-eco-sage rounded-full"></span>
+                            EPR Compliance
+                        </li>
+                        <li className="flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 bg-eco-sage rounded-full"></span>
+                            Cost optimization
+                        </li>
+                        <li className="flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 bg-eco-sage rounded-full"></span>
+                            Circularity
+                        </li>
+                    </ul>
                   </div>
                 </div>
 
-                {/* Right Column: EPR Credits Card */}
-                <div className="w-full lg:w-[450px]">
+                {/* Right Column: EPR Services */}
+                <div className="w-full lg:w-[500px]">
                   <motion.div 
                     whileHover={{ y: -5 }}
                     className="bg-white text-eco-dark rounded-3xl p-8 shadow-xl border border-white/10 relative overflow-hidden group"
@@ -154,27 +156,30 @@ const OurServicesPage = () => {
                     
                     <div className="relative z-10">
                       <div className="w-16 h-16 bg-eco-forest/10 rounded-2xl flex items-center justify-center mb-6 text-eco-forest">
-                        <Award size={32} />
+                        <ShieldCheck size={32} />
                       </div>
                       
-                      <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
-                        EPR Credits
-                        <span className="px-3 py-1 rounded-full bg-eco-beige text-xs font-bold text-eco-forest uppercase tracking-wider">Certified</span>
+                      <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                        EPR Services
                       </h3>
                       
-                      <p className="text-gray-600 mb-6 leading-relaxed">
-                        Official certificates proving a company has met its waste management obligations. If a business cannot manage its own waste, it can purchase these credits from authorized recyclers.
-                      </p>
+                      <ul className="space-y-4">
+                        {[
+                          "Producer responsibility compliance (Plastic, E-waste, Battery, etc.)",
+                          "Registration & documentation support",
+                          "Annual returns & audit handling",
+                          "Credit sourcing & traceability",
+                          "Liaison with authorities / CPCB / SPCBs"
+                        ].map((item, index) => (
+                          <li key={index} className="flex items-start gap-3 text-gray-700">
+                            <div className="mt-1 min-w-[20px]">
+                              <Award size={18} className="text-eco-forest" />
+                            </div>
+                            <span className="leading-relaxed">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
 
-                      <div className="bg-gray-50 rounded-2xl p-5 border border-gray-100">
-                        <div className="flex items-center gap-3 mb-3 text-sm font-semibold text-gray-800">
-                          <Coins size={18} className="text-yellow-600" />
-                          <span>How it works</span>
-                        </div>
-                        <p className="text-xs text-gray-500 leading-relaxed">
-                          Companies placing plastic, batteries, or electronics in the market must offset their footprint by purchasing equivalent recycling credits from certified partners like us.
-                        </p>
-                      </div>
                     </div>
                   </motion.div>
                 </div>
@@ -183,6 +188,200 @@ const OurServicesPage = () => {
             </div>
           </motion.div>
 
+          {/* ESG Services Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            id="esg-section"
+            className="mt-24 relative overflow-hidden rounded-[3rem] bg-linear-to-bl from-zinc-800 to-zinc-900 text-white shadow-2xl"
+          >
+             {/* Background Pattern */}
+             <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-eco-sage/5 rounded-full blur-3xl -translate-x-1/3 -translate-y-1/3 pointer-events-none" />
+             <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-eco-forest/20 rounded-full blur-3xl translate-x-1/3 translate-y-1/3 pointer-events-none" />
+
+            <div className="relative z-10 p-8 md:p-16">
+              <div className="flex flex-col lg:flex-row-reverse gap-12 lg:gap-20 items-start">
+                
+                {/* Right Column (Info): ESG Context */}
+                <div className="flex-1 space-y-8">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-eco-sage text-sm font-medium">
+                    <TrendingUp size={16} />
+                    <span>Future-Proofing Business</span>
+                  </div>
+                  
+                  <h2 className="text-3xl md:text-5xl font-bold leading-tight">
+                    ESG Services / <br/>
+                    <span className="text-eco-sage">Compliances</span>
+                  </h2>
+                  
+                  <p className="text-lg text-gray-300 leading-relaxed">
+                    We provide end-to-end sustainability and ESG solutions, guiding businesses step by step to future-proof their climate action roadmap.
+                  </p>
+
+                  <div className="bg-white/5 rounded-2xl p-6 border border-white/10 mt-6">
+                    <h4 className="text-xl font-semibold mb-3 text-eco-sage">We turn compliance into competitive advantage</h4>
+                    <ul className="text-gray-300 space-y-2">
+                        {[
+                            "ESG Risk reduction",
+                            "Investor confidence",
+                            "Brand trust",
+                            "Access to capital"
+                        ].map((item, idx) => (
+                            <li key={idx} className="flex items-center gap-2">
+                                <span className="w-1.5 h-1.5 bg-eco-sage rounded-full"></span>
+                                {item}
+                            </li>
+                        ))}
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Left Column (Services List): ESG Services */}
+                <div className="w-full lg:w-[480px]">
+                  <motion.div 
+                    whileHover={{ y: -5 }}
+                    className="bg-zinc-800/80 text-white rounded-3xl p-8 shadow-xl border border-white/10 relative overflow-hidden group backdrop-blur-md"
+                  >
+                     <div className="absolute inset-0 bg-linear-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    
+                    <div className="relative z-10">
+                      <div className="w-16 h-16 bg-eco-sage/20 rounded-2xl flex items-center justify-center mb-6 text-eco-sage">
+                        <Leaf size={32} />
+                      </div>
+                      
+                      <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                        ESG Services
+                      </h3>
+                      
+                      <ul className="space-y-4">
+                        {[
+                          "ESG strategy & roadmap",
+                          "Materiality assessment",
+                          "ESG data collection & management",
+                          "ESG reporting (BRSR, GRI, IFRS, etc.)",
+                          "Ratings & investor readiness",
+                          "Decarbonization & impact measurement"
+                        ].map((item, index) => (
+                          <li key={index} className="flex items-start gap-3 text-zinc-300 group-hover:text-white transition-colors">
+                            <div className="mt-1 min-w-[20px]">
+                              <CheckCircle2 size={18} className="text-eco-sage" />
+                            </div>
+                            <span className="leading-relaxed">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                    </div>
+                  </motion.div>
+                </div>
+
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Carbon Credit / Offset Ecosystem Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            id="carbon-credits"
+            className="mt-24 relative overflow-hidden rounded-[3rem] bg-linear-to-tr from-[#1a3c34] to-[#2d5a4e] text-white shadow-2xl"
+          >
+             {/* Background Pattern */}
+             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3 pointer-events-none" />
+             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-black/20 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3 pointer-events-none" />
+
+            <div className="relative z-10 p-8 md:p-16">
+              <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+                
+                {/* Left Column: Intro & Strategy */}
+                <div className="flex-1 space-y-8">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-eco-sage text-sm font-medium">
+                    <Globe size={16} />
+                    <span>Global Impact</span>
+                  </div>
+                  
+                  <h2 className="text-3xl md:text-5xl font-bold leading-tight">
+                    Carbon Credit / <br/>
+                    <span className="text-yellow-400">Offset Ecosystem</span>
+                  </h2>
+                  
+                  <p className="text-lg text-gray-200 leading-relaxed font-medium">
+                    Carbon credits are no longer a checkbox — they’re a strategic asset.
+                  </p>
+                  
+                  <p className="text-gray-300 leading-relaxed">
+                    We don't just take your waste away; we transform them into a certified environmental asset.
+                    We keep you a step ahead in market where corporates are “buying credits” — we assist you with “owning verified quality credits”.
+                  </p>
+
+                  <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                     <div className="flex-1 bg-white/10 rounded-2xl p-5 border border-white/10 backdrop-blur-sm">
+                        <TrendingUp className="text-yellow-400 mb-3" size={24} />
+                        <h4 className="font-bold text-lg mb-1">Strategic Asset</h4>
+                        <p className="text-xs text-gray-300">Transforming liabilities into certified environmental wealth.</p>
+                     </div>
+                     <div className="flex-1 bg-white/10 rounded-2xl p-5 border border-white/10 backdrop-blur-sm">
+                        <ShieldCheck className="text-eco-sage mb-3" size={24} />
+                        <h4 className="font-bold text-lg mb-1">Verify Ownership</h4>
+                        <p className="text-xs text-gray-300">Don't just buy credits, own the quality and the outcome.</p>
+                     </div>
+                  </div>
+                </div>
+
+                {/* Right Column: The Differentiator */}
+                <div className="w-full lg:w-[500px]">
+                  <motion.div 
+                    whileHover={{ scale: 1.02 }}
+                    className="bg-white text-eco-dark rounded-3xl p-8 shadow-2xl border border-white/10 relative overflow-hidden"
+                  >
+                    
+                    <div className="relative z-10">
+                      <div className="flex items-center gap-3 mb-6">
+                          <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center text-yellow-600">
+                            <Award size={24} />
+                          </div>
+                          <div>
+                            <span className="text-xs font-bold text-yellow-600 uppercase tracking-wider">The Differentiator</span>
+                            <h3 className="text-xl font-bold">What Sets Us Apart?</h3>
+                          </div>
+                      </div>
+                      
+                      <p className="text-gray-600 mb-6 text-sm">
+                        Wherein most providers are only brokers or traders, we are:
+                      </p>
+
+                      <ul className="space-y-4">
+                        <li className="flex items-center gap-3 bg-eco-beige/30 p-3 rounded-xl">
+                            <CheckCircle2 size={20} className="text-eco-forest shrink-0" />
+                            <span className="font-bold text-eco-dark">Credit generators + traders</span>
+                        </li>
+                        <li className="flex items-center gap-3 bg-eco-beige/30 p-3 rounded-xl">
+                            <CheckCircle2 size={20} className="text-eco-forest shrink-0" />
+                            <span className="font-medium text-gray-800">Direct control over project integrity</span>
+                        </li>
+                        <li className="flex items-center gap-3 bg-eco-beige/30 p-3 rounded-xl">
+                            <CheckCircle2 size={20} className="text-eco-forest shrink-0" />
+                            <span className="font-medium text-gray-800">Transparent, auditable carbon outcomes</span>
+                        </li>
+                      </ul>
+
+                      <div className="mt-8 pt-6 border-t border-gray-100 text-center">
+                        <p className="text-lg font-bold text-eco-forest italic">
+                          "We don’t just trade carbon credits — we create it."
+                        </p>
+                      </div>
+
+                    </div>
+                  </motion.div>
+                </div>
+
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Commitment to Sustainability */}
           <div className="mt-20 bg-eco-forest rounded-[3rem] p-10 md:p-16 text-center text-white relative overflow-hidden">
             <div className="relative z-10">
               <h2 className="text-3xl md:text-5xl font-bold mb-6">Commitment to Sustainability</h2>

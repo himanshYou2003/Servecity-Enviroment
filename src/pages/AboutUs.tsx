@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Award, Infinity, Recycle, TrendingUp, FileCheck, BarChart3, HeartHandshake, Quote } from 'lucide-react';
 import WhyChooseUs from '../components/WhyChooseUs';
 
 const AboutUsPage = () => {
@@ -28,27 +29,82 @@ management activities+ EPR Services+ ESG Reporting+ Carbon
 credit trading.
               </p>
               
-              <div className="bg-white p-6 rounded-2xl shadow-sm border border-eco-sage/20 mt-8">
-                <h3 className="text-xl font-bold text-eco-forest mb-4">Company Details</h3>
-                <ul className="space-y-3 text-base">
-                  <li className="flex justify-between border-b border-gray-100 pb-2">
-                    <span className="text-gray-500">Incorporation Date</span>
-                    <span className="font-medium">June 28, 2021</span>
-                  </li>
-                  <li className="flex justify-between border-b border-gray-100 pb-2">
-                    <span className="text-gray-500">Registration</span>
-                    <span className="font-medium">Mumbai, Maharashtra (RoC)</span>
-                  </li>
-                  <li className="flex justify-between border-b border-gray-100 pb-2">
-                    <span className="text-gray-500">CIN</span>
-                    <span className="font-medium">U37100MH2021PTC362836</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span className="text-gray-500">Status</span>
-                    <span className="font-medium text-green-600">Active</span>
-                  </li>
-                </ul>
+              {/* Integrated Ecosystem Highlights */}
+              <div className="mt-12 space-y-6">
+                <h3 className="text-2xl font-bold text-eco-dark flex items-center gap-3">
+                    <span className="w-8 h-1 bg-eco-forest rounded-full"></span>
+                    Our Integrated Ecosystem
+                </h3>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {/* Featured Item */}
+                    <div className="md:col-span-2 bg-eco-forest text-white p-6 rounded-2xl shadow-lg relative overflow-hidden group">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl translate-x-1/3 -translate-y-1/3 group-hover:scale-110 transition-transform" />
+                        <div className="relative z-10 flex gap-4 items-start">
+                            <div className="bg-white/20 p-3 rounded-xl backdrop-blur-sm">
+                                <Award className="text-yellow-300" size={24} />
+                            </div>
+                            <div>
+                                <h4 className="font-bold text-lg mb-1">One-Stop Solution</h4>
+                                <p className="text-eco-sage text-sm leading-relaxed">
+                                    Complete corporate environmental compliance and sustainability from a single partner.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {[
+                        {
+                            icon: Infinity,
+                            text: "Lifetime unlimited Carbon & Plastic Credits Ecosystem",
+                            color: "text-blue-600",
+                            bg: "bg-blue-50"
+                        },
+                        {
+                            icon: Recycle,
+                            text: "Integrated Waste + EPR + ESG + Carbon Credit Ecosystem",
+                            color: "text-green-600",
+                            bg: "bg-green-50"
+                        },
+                        {
+                            icon: TrendingUp,
+                            text: "Cost savings via optimization & carbon monetization",
+                            color: "text-purple-600",
+                            bg: "bg-purple-50"
+                        },
+                        {
+                            icon: FileCheck,
+                            text: "Simplified EPR and CPCB/SPCB compliance",
+                            color: "text-orange-600",
+                            bg: "bg-orange-50"
+                        },
+                        {
+                            icon: BarChart3,
+                            text: "Boosted corporate image with ESG reporting",
+                            color: "text-indigo-600",
+                            bg: "bg-indigo-50"
+                        },
+                        {
+                            icon: HeartHandshake,
+                            text: "Handling CSR funds for sustainable projects",
+                            color: "text-rose-600",
+                            bg: "bg-rose-50"
+                        }
+                    ].map((item, i) => (
+                        <motion.div 
+                            whileHover={{ y: -5 }}
+                            key={i} 
+                            className="bg-white p-5 rounded-2xl shadow-sm border border-eco-sage/10 hover:shadow-md transition-all flex gap-4 items-start"
+                        >
+                             <div className={`${item.bg} ${item.color} p-3 rounded-xl shrink-0`}>
+                                <item.icon size={20} />
+                             </div>
+                             <span className="text-gray-700 font-medium text-sm leading-relaxed pt-1">{item.text}</span>
+                        </motion.div>
+                    ))}
+                </div>
               </div>
+
             </div>
 
             <div className="space-y-8">
@@ -61,22 +117,40 @@ credit trading.
                 <div className="absolute inset-0 bg-black/20" />
               </div>
 
-              <div>
-                <h2 className="text-3xl font-bold text-eco-dark mb-6">Leadership</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
-                    <div className="w-16 h-16 bg-eco-forest/10 rounded-full flex items-center justify-center text-eco-forest font-bold text-2xl mb-4">
-                      AS
+              <div className="md:sticky md:top-24">
+                <h2 className="text-3xl font-bold text-eco-dark mb-6 flex items-center gap-3">
+                   <span className="w-8 h-1 bg-eco-forest rounded-full"></span>
+                   Leadership
+                </h2>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-linear-to-r from-eco-forest to-eco-sage rounded-2xl blur-md opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                  <div className="relative bg-white p-8 rounded-2xl shadow-xl border border-white/20">
+                    <div className="absolute top-0 right-0 p-6 opacity-10">
+                       <Quote size={80} className="text-eco-forest" />
                     </div>
-                    <h3 className="text-xl font-bold text-eco-dark">Avinashkumar Anilkumar Sah</h3>
-                    <p className="text-eco-sage font-medium">Director</p>
-                  </div>
-                  <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow">
-                    <div className="w-16 h-16 bg-eco-forest/10 rounded-full flex items-center justify-center text-eco-forest font-bold text-2xl mb-4">
-                      ET
+                    
+                    <div className="flex flex-col items-center text-center relative z-10">
+                        <div className="w-24 h-24 mb-6 relative">
+                            <div className="absolute inset-0 bg-eco-forest/10 rounded-full animate-pulse"></div>
+                            <div className="absolute inset-2 bg-white rounded-full flex items-center justify-center border-2 border-eco-forest/20 shadow-inner">
+                                <span className="text-3xl font-bold text-eco-forest">AS</span>
+                            </div>
+                        </div>
+                        
+                        <h3 className="text-2xl font-bold text-eco-dark mb-2">Avinashkumar Anilkumar Sah</h3>
+                        <div className="inline-block px-4 py-1 bg-eco-sage/10 rounded-full mb-6">
+                            <p className="text-eco-forest font-semibold text-sm tracking-wide uppercase">Director</p>
+                        </div>
+                        
+                        <p className="text-gray-600 italic leading-relaxed">
+                            "Driving sustainability through innovation and integrity. Our mission is to create value from waste while preserving our planet for future generations."
+                        </p>
+                        
+                        <div className="mt-6 pt-6 border-t border-gray-100 w-full flex justify-center gap-4">
+                           {/* Social/Contact placeholders could go here */}
+                           <div className="h-1 w-12 bg-eco-forest/20 rounded-full"></div>
+                        </div>
                     </div>
-                    <h3 className="text-xl font-bold text-eco-dark">Ekanath Dhondu Tambe</h3>
-                    <p className="text-eco-sage font-medium">Director</p>
                   </div>
                 </div>
               </div>

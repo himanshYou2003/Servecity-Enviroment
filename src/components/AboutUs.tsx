@@ -10,10 +10,9 @@ const AboutUs = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-eco-forest font-semibold tracking-wider uppercase text-sm">About Us</span>
+          <span className="text-eco-forest font-semibold tracking-wider uppercase text-sm">Why Choose Us</span>
           <h2 className="text-4xl md:text-5xl font-bold text-eco-dark mt-4 mb-8 leading-tight">
-            Total Waste Management <br />
-            <span className="text-eco-sage">Solutions</span>
+            Your Sustainability Partner
           </h2>
           <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
             <p>
