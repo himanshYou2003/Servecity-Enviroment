@@ -7,7 +7,6 @@ const navItems = [
   { title: "Home", href: "/" },
   { title: "Our Services", href: "/our-services" },
   { title: "About Us", href: "/about-us" },
-
   { title: "Engage", href: "/engage" }
 ];
 
@@ -35,7 +34,7 @@ const Navbar = () => {
                 <div key={index} className="relative group">
                   <Link 
                     to={item.href}
-                    className="text-sm font-medium hover:text-eco-sage transition-colors text-eco-dark flex items-center gap-1"
+                    className="text-sm font-[600] hover:text-eco-sage transition-colors text-eco-dark flex items-center gap-1"
                   >
                     {item.title}
                   </Link>
@@ -65,7 +64,7 @@ const Navbar = () => {
               <Link 
                 key={index} 
                 to={item.href}
-                className="text-sm font-medium hover:text-eco-sage transition-colors text-eco-dark"
+                className="text-sm font-[600] hover:text-eco-sage transition-colors text-eco-dark"
               >
                 {item.title}
               </Link>
