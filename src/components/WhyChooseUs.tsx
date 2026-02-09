@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Layers, TrendingUp, FileCheck, Award } from 'lucide-react';
+import { Layers, IndianRupee, FileCheck, Award } from 'lucide-react';
 
 const features = [
   {
@@ -8,7 +8,7 @@ const features = [
     desc: "Comprehensive environmental compliance and sustainability solutions for corporates."
   },
   {
-    icon: TrendingUp,
+    icon: IndianRupee,
     title: "Cost Optimization",
     desc: "Integrated services for waste management and monetization via carbon credits."
   },

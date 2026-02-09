@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import side from '../assets/side.jpeg'
 
 const AboutUs = () => {
   return (
@@ -40,11 +41,11 @@ their ESG goals.
         >
           <div className="relative rounded-4xl overflow-hidden shadow-2xl">
             <img 
-              src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=2070&auto=format&fit=crop" 
+              src={side} 
               alt="Waste Management Facility" 
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/15 to-transparent" />
             <div className="absolute bottom-8 left-8 text-white">
               <div className="text-4xl font-bold mb-1">Est. 2021</div>
               <div className="text-sm uppercase tracking-wider opacity-90">Mumbai, India</div>

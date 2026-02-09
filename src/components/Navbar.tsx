@@ -43,7 +43,7 @@ const Navbar = () => {
                   <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                     <div className="bg-white rounded-xl shadow-xl border border-gray-100 p-2 min-w-[200px] overflow-hidden">
                       {[
-                        { name: "Waste Management", href: "/services/waste-management" },
+                        { name: "Waste Management", href: "/our-services" },
                         { name: "EPR", href: "/our-services#epr-section" },
                         { name: "ESG", href: "/our-services#esg-section" },
                         { name: "Carbon Credits", href: "/our-services#carbon-credits" }

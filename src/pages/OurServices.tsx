@@ -68,7 +68,7 @@ const OurServicesPage = () => {
           </p>
 
 
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 mb-20">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -76,24 +76,78 @@ const OurServicesPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 className="bg-white p-4 md:p-8 rounded-2xl md:rounded-3xl shadow-sm border border-eco-sage/20 hover:shadow-xl transition-all duration-300 flex flex-col items-start h-full group cursor-pointer"
-                onClick={() => {
-                   if (service.title === "Wet Waste Management") {
-                       window.location.href = "/services/waste-management"; 
-                   }
-                }}
               >
                 <div className="w-10 h-10 md:w-14 md:h-14 bg-eco-beige/50 rounded-xl md:rounded-2xl flex items-center justify-center mb-3 md:mb-6 text-eco-forest shadow-sm shrink-0 group-hover:bg-eco-forest group-hover:text-white transition-colors duration-300">
                   <service.icon className="w-5 h-5 md:w-7 md:h-7" />
                 </div>
                 <h3 className="text-sm md:text-2xl font-bold text-eco-dark mb-2 md:mb-3 leading-tight group-hover:text-eco-forest transition-colors">{service.title}</h3>
                 <p className="text-xs md:text-base text-gray-600 leading-relaxed line-clamp-3 md:line-clamp-none">{service.desc}</p>
-                {service.title === "Wet Waste Management" && (
-                     <div className="mt-4 text-eco-forest font-semibold text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                         Learn More →
-                     </div>
-                )}
               </motion.div>
             ))}
+          </div>
+
+          {/* Key Feature: Carbon Credits */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            className="bg-eco-forest text-white rounded-[2.5rem] p-10 md:p-16 relative overflow-hidden mb-20"
+          >
+            <div className="relative z-10 flex flex-col md:flex-row items-center gap-10">
+              <div className="flex-1">
+                <h2 className="text-3xl md:text-5xl font-bold mb-6">What sets us apart?</h2>
+                <p className="text-eco-sage text-lg mb-8 leading-relaxed">
+                  We go beyond just managing waste. We turn your environmental responsibility into tangible value.
+                </p>
+                <div className="flex items-start gap-4 bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/10">
+                  <div className="w-12 h-12 bg-eco-sage text-eco-forest rounded-full flex items-center justify-center shrink-0">
+                    <TrendingUp size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Carbon Credits Generation</h3>
+                    <p className="text-gray-200">
+                      Unlike other players in the market, we will generate Carbon credits against your waste for you, 
+                      adding financial value to your sustainability efforts.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full md:w-1/3 flex justify-center">
+                <div className="relative">
+                    <div className="absolute inset-0 bg-eco-sage/20 blur-3xl rounded-full" />
+                    <Award size={180} className="text-eco-sage relative z-10" />
+                </div>
+              </div>
+            </div>
+            
+            {/* Background decorations */}
+            <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-black/10 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" />
+          </motion.div>
+
+          {/* Capabilities Grid */}
+          <div className="grid md:grid-cols-2 gap-8 mb-20">
+            <div className="bg-white p-8 rounded-3xl shadow-sm border border-eco-sage/20">
+              <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                <Globe size={32} />
+              </div>
+              <h3 className="text-2xl font-bold text-eco-dark mb-4">Extensive Network</h3>
+              <p className="text-gray-600 leading-relaxed">
+                With our extensive network and connection with end life recyclers pan India
+                we are capable of handling all types and quantities of wastes effectively and efficiently.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-3xl shadow-sm border border-eco-sage/20">
+              <div className="w-14 h-14 bg-orange-50 text-orange-600 rounded-2xl flex items-center justify-center mb-6">
+                <Factory size={32} />
+              </div>
+              <h3 className="text-2xl font-bold text-eco-dark mb-4">Comprehensive Handling</h3>
+              <p className="text-gray-600 leading-relaxed">
+                We are capable of both customized On-site and Off-site waste handling
+                even if it is industry specific handling like Organic, plastic, hazardous,
+                biomedical etc.
+              </p>
+            </div>
           </div>
 
           {/* Modern EPR Section */}

@@ -29,7 +29,7 @@ const Mission = () => {
             whileInView={{ opacity: 1 }}
             className="text-eco-forest font-semibold tracking-wider uppercase text-sm"
           >
-            Our Mission
+          Our Mission
           </motion.span>
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
