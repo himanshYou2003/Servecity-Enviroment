@@ -28,9 +28,9 @@ their ESG goals.
               <p className="text-sm text-gray-500 font-medium">CIN: U37100MH2021PTC362836</p>
             </div> */}
           </div>
-          <Link to="/about-us" className="mt-10 inline-block px-8 py-3 rounded-full bg-eco-forest text-white font-semibold hover:bg-eco-dark transition-all duration-300 shadow-lg hover:shadow-xl">
+          {/* <Link to="/about-us" className="mt-10 inline-block px-8 py-3 rounded-full bg-eco-forest text-white font-semibold hover:bg-eco-dark transition-all duration-300 shadow-lg hover:shadow-xl">
             Read Our Story
-          </Link>
+          </Link> */}
         </motion.div>
 
         <motion.div
@@ -46,10 +46,10 @@ their ESG goals.
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-linear-to-t from-black/45  to-transparent " />
-            <div className="absolute bottom-8 left-8 text-white">
+            {/* <div className="absolute bottom-8 left-8 text-white">
               <div className="text-4xl font-bold mb-1">Est. 2021</div>
               <div className="text-sm uppercase tracking-wider opacity-90">Mumbai, India</div>
-            </div>
+            </div> */}
           </div>
           
           {/* Decorative element */}
