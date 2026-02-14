@@ -26,9 +26,8 @@ const ContactPage = () => {
                     <div>
                       <p className="font-semibold text-gray-900 mb-1">Registered Office</p>
                       <p className="text-gray-600 leading-relaxed">
-                        Flat No 206, A Wing, Nav Kiran SRA Society,<br />
-                        Near Apna Ghar Society, Harinagar,<br />
-                        Mumbai, Maharashtra, India – 400060
+                        S-11, Solitaire Corporate park,<br />
+                        Andheri east-400093
                       </p>
                     </div>
                   </div>
@@ -39,7 +38,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900 mb-1">Email Us</p>
-                      <p className="text-gray-600">servecityenvt.in@gmail.com</p>
+                      <p className="text-gray-600">avinash@servecityenvt.in</p>
                     </div>
                   </div>
 
@@ -69,36 +68,40 @@ const ContactPage = () => {
             {/* Contact Form */}
             <div className="bg-white p-8 md:p-10 rounded-3xl shadow-lg">
               <h3 className="text-2xl font-bold text-eco-dark mb-6">Send us a Message</h3>
-              <form className="space-y-6">
+              <form action="https://formsubmit.co/avinash@servecityenvt.in" method="POST" className="space-y-6">
+                <input type="hidden" name="_subject" value="New Contact Message from Website" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-eco-sage/50" placeholder="John" />
+                    <input type="text" name="firstName" required className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-eco-sage/50" placeholder="John" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-eco-sage/50" placeholder="Doe" />
+                    <input type="text" name="lastName" required className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-eco-sage/50" placeholder="Doe" />
                   </div>
                 </div>
                 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                  <input type="email" className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-eco-sage/50" placeholder="john@company.com" />
+                  <input type="email" name="email" required className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-eco-sage/50" placeholder="john@company.com" />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
-                  <select className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-eco-sage/50">
-                    <option>Waste Management Inquiry</option>
-                    <option>Partnership Proposal</option>
-                    <option>Career Opportunity</option>
-                    <option>Other</option>
+                  <select name="subject" className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-eco-sage/50">
+                    <option value="Waste Management Inquiry">Waste Management Inquiry</option>
+                    <option value="Partnership Proposal">Partnership Proposal</option>
+                    <option value="Career Opportunity">Career Opportunity</option>
+                    <option value="Other">Other</option>
                   </select>
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                  <textarea rows={4} className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-eco-sage/50" placeholder="How can we help you?"></textarea>
+                  <textarea name="message" required rows={4} className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-eco-sage/50" placeholder="How can we help you?"></textarea>
                 </div>
 
                 <button type="submit" className="w-full py-4 rounded-xl bg-eco-forest text-white font-bold text-lg hover:bg-eco-dark transition-colors shadow-lg">

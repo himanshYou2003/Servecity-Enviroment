@@ -60,7 +60,7 @@ const EngagePage = () => {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Direct Contact</h3>
               <p className="text-gray-600 mb-4">Reach out to us directly for business inquiries and collaborations.</p>
-              <p className="font-medium text-gray-900">servecityenvt.in@gmail.com</p>
+              <p className="font-medium text-gray-900">avinash@servecityenvt.in</p>
             </div>
           </div>
         </motion.div>

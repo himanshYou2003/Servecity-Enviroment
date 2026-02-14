@@ -14,19 +14,20 @@ const Footer = () => {
             <p>Est. June 28, 2021</p>
             <p>RoC: Mumbai, Maharashtra</p>
           </div>
-          <div className="flex gap-4">
+          {/* <div className="flex gap-4">
             {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
               <a key={i} href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-eco-forest transition-colors">
                 <Icon size={18} />
               </a>
             ))}
-          </div>
+          </div> */}
         </div>
         
         <div>
           <h3 className="text-white font-bold mb-6">Quick Links</h3>
           <ul className="space-y-3 text-sm">
-            {['Home', 'About Us', 'Our Services', 'Engage', 'Contact'].map((item) => (
+            {/* {['Home', 'About Us', 'Our Services', 'Engage','Contact'].map((item) => ( */}
+            {['Home', 'About Us', 'Our Services', 'Contact'].map((item) => (
               <li key={item}>
                 <a href="#" className="hover:text-eco-sage transition-colors text-white/70">{item}</a>
               </li>
@@ -41,16 +42,15 @@ const Footer = () => {
               <li className="flex gap-3">
                 <span className="font-semibold text-white min-w-[60px]">Address:</span>
                 <span>
-                  Flat No 206, A Wing, Nav Kiran SRA Society,<br />
-                  Near Apna Ghar Society, Harinagar,<br />
-                  Mumbai, Maharashtra, India – 400060
+                  S-11, Solitaire Corporate park,<br />
+                  Andheri east-400093
                 </span>
               </li>
             </ul>
             <ul className="space-y-4 text-sm text-white/70">
               <li className="flex gap-3">
                 <span className="font-semibold text-white min-w-[60px]">Email:</span>
-                <span>servecityenvt.in@gmail.com</span>
+                <span>avinash@servecityenvt.in</span>
               </li>
               <li className="flex gap-3">
                 <span className="font-semibold text-white min-w-[60px]">Phone:</span>
