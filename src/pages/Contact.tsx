@@ -73,7 +73,8 @@ const ContactPage = () => {
                 const formData = new FormData(e.currentTarget);
                 const data = Object.fromEntries(formData.entries());
                 
-                const text = `*New Contact Request from Website*%0A%0A*Name:* ${data.firstName} ${data.lastName}%0A*Email:* ${data.email}%0A*Subject:* ${data.subject}%0A*Message:* ${data.message}`;
+                const fullName = data.lastName ? `${data.firstName} ${data.lastName}` : data.firstName;
+                const text = `*New Contact Request from Website*%0A%0A*Name:* ${fullName}%0A*Email:* ${data.email}%0A*Subject:* ${data.subject}%0A*Message:* ${data.message}`;
                 
                 window.open(`https://wa.me/918655048759?text=${text}`, '_blank');
               }} className="space-y-6">
@@ -84,8 +85,8 @@ const ContactPage = () => {
                     <input type="text" name="firstName" required className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-eco-sage/50" placeholder="John" />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                    <input type="text" name="lastName" required className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-eco-sage/50" placeholder="Doe" />
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Last Name <span className="text-gray-400 font-normal">(Optional)</span></label>
+                    <input type="text" name="lastName" className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-eco-sage/50" placeholder="Doe" />
                   </div>
                 </div>
                 
