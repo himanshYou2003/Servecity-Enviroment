@@ -68,10 +68,15 @@ const ContactPage = () => {
             {/* Contact Form */}
             <div className="bg-white p-8 md:p-10 rounded-3xl shadow-lg">
               <h3 className="text-2xl font-bold text-eco-dark mb-6">Send us a Message</h3>
-              <form action="https://formsubmit.co/79b4bfc394187b06f16c35b08f34b554" method="POST" className="space-y-6">
-                <input type="hidden" name="_subject" value="New Contact Message from Website" />
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_template" value="table" />
+              <form onSubmit={(e) => {
+                e.preventDefault();
+                const formData = new FormData(e.currentTarget);
+                const data = Object.fromEntries(formData.entries());
+                
+                const text = `*New Contact Request from Website*%0A%0A*Name:* ${data.firstName} ${data.lastName}%0A*Email:* ${data.email}%0A*Subject:* ${data.subject}%0A*Message:* ${data.message}`;
+                
+                window.open(`https://wa.me/918655048759?text=${text}`, '_blank');
+              }} className="space-y-6">
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -105,7 +110,7 @@ const ContactPage = () => {
                 </div>
 
                 <button type="submit" className="w-full py-4 rounded-xl bg-eco-forest text-white font-bold text-lg hover:bg-eco-dark transition-colors shadow-lg">
-                  Send Message
+                  Send Message on WhatsApp
                 </button>
               </form>
             </div>
