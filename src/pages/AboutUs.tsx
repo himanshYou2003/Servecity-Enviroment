@@ -137,7 +137,7 @@ credit trading.
                             </div>
                         </div>
                         
-                        <h3 className="text-2xl font-bold text-eco-dark mb-2">Avinashkumar Anilkumar Sah</h3>
+                        <h3 className="text-2xl font-bold text-eco-dark mb-2">Avinashkumar Sah</h3>
                         <div className="inline-block px-4 py-1 bg-eco-sage/10 rounded-full mb-6">
                             <p className="text-eco-forest font-semibold text-sm tracking-wide uppercase">Director</p>
                         </div>

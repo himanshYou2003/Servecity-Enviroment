@@ -7,7 +7,7 @@ const navItems = [
   { title: "Home", href: "/" },
   { title: "Our Services", href: "/our-services" },
   { title: "About Us", href: "/about-us" },
-  { title: "Engage", href: "/engage" }
+  // { title: "Engage", href: "/engage" }
 ];
 
 const Navbar = () => {

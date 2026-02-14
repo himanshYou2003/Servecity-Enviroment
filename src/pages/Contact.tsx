@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
 
 const ContactPage = () => {
   return (
@@ -52,7 +52,7 @@ const ContactPage = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4">
+                  {/* <div className="flex items-start gap-4">
                     <div className="p-3 bg-eco-beige rounded-xl text-eco-forest">
                       <Clock size={24} />
                     </div>
@@ -60,7 +60,7 @@ const ContactPage = () => {
                       <p className="font-semibold text-gray-900 mb-1">Business Hours</p>
                       <p className="text-gray-600">Mon - Sat: 9:00 AM - 6:00 PM</p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
