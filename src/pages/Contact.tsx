@@ -68,7 +68,7 @@ const ContactPage = () => {
             {/* Contact Form */}
             <div className="bg-white p-8 md:p-10 rounded-3xl shadow-lg">
               <h3 className="text-2xl font-bold text-eco-dark mb-6">Send us a Message</h3>
-              <form action="https://formsubmit.co/avinash@servecityenvt.in" method="POST" className="space-y-6">
+              <form action="https://formsubmit.co/79b4bfc394187b06f16c35b08f34b554" method="POST" className="space-y-6">
                 <input type="hidden" name="_subject" value="New Contact Message from Website" />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="table" />
